@@ -30,6 +30,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.google.protobuf'
 
 android {
+    if (project.android.hasProperty('namespace')) {
+        namespace 'de.mintware.barcode_scan'
+    }
     compileSdkVersion 31
 
     sourceSets {
